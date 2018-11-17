@@ -274,7 +274,7 @@ body {
   position: absolute;
   right: 50px;
   top: 50px;
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   z-index: 1000;
 }
