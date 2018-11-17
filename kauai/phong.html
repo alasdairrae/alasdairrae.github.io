@@ -86,7 +86,27 @@
 <div id="progress"><div id="bar"></div></div>
 
 <!-- footer -->
-<div id="footer"><span id="infobtn"><img src="./Qgis2threejs.png"></span> </div>
+<div id="footer"><span id="infobtn"><img src="./Qgis2threejs.png"></span> <p><font size="5" color="#ffffff"><b>Kauai</b> - made with <a href="https://qgis2threejs.readthedocs.io/en/docs/" target="_blank" rel="noopener">qgis2threejs</a> in&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/QGIS_logo%2C_2017.svg/801px-QGIS_logo%2C_2017.svg.png" alt="QGIS logo" width="56" height="17"></font></p></div>
+
+<script>
+Q3D.Config.allVisible = true;
+Q3D.Config.northArrow.visible = true;
+Q3D.Config.northArrow.color = 0x7ea628;
+if (typeof proj4 === "undefined") document.getElementById("lib_proj4js").style.display = "none";
+var app = Q3D.application,
+    container = document.getElementById("view");
+app.init(container);           // initialize application
+// load the scene
+app.loadJSONFile("./data/kauai_v1/scene.json", function () {
+  app.start();
+  // North arrow inset
+  if (Q3D.Config.northArrow.visible) app.buildNorthArrow(document.getElementById("northarrow"), app.scene.userData.rotation);
+});
+document.getElementById("infobtn").onclick = app.showInfo.bind(app);
+</script>
+</body>
+</html>
+
 
 <script>
 Q3D.Config.allVisible = true;
