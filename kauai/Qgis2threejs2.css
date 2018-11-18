@@ -272,9 +272,9 @@ body {
 
 #northarrow {
   position: absolute;
-  left: 12px;
-  bottom: 16px;
-  width: 80px;
-  height: 80px;
+  left: 5px;
+  bottom: 5px;
+  width: 100px;
+  height: 100px;
   z-index: 1000;
 }
