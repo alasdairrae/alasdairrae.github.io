@@ -1,12 +1,12 @@
-## Welcome to GitHub Pages
+## Alasdair's Experimental Outputs
 
-You can use the [editor on GitHub](https://github.com/alasdairrae/alasdairrae.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+You can find out more about my work on [my main University page](http://ajrae.staff.shef.ac.uk/) - this page is just for a few of my experimental outputs, such as interactive maps.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+When I say 'experimental', I don't mean that it's not correct or somehow unfinished, just that I probably haven't done it for any specific project or client.
 
-### Markdown
+### The rest of the text is just holding text for now
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+I'll edit this stuff in due course but for now I have no need to.
 
 ```markdown
 Syntax highlighted code block
