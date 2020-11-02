@@ -1,0 +1,36 @@
+{
+    "title": "Portfolio Item",
+    "name": "startbootstrap-portfolio-item",
+    "version": "4.1.1",
+    "description": "A portfolio item HTML template built with Bootstrap",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template"
+    ],
+    "homepage": "https://startbootstrap.com/template-overviews/portfolio-item",
+    "bugs": {
+        "url": "https://github.com/BlackrockDigital/startbootstrap-portfolio-item/issues",
+        "email": "feedback@startbootstrap.com"
+    },
+    "license": "MIT",
+    "author": "Start Bootstrap",
+    "contributors": [
+        "David Miller (http://davidmiller.io/)"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/BlackrockDigital/startbootstrap-portfolio-item.git"
+    },
+    "dependencies": {
+        "bootstrap": "4.1.1",
+        "jquery": "3.3.1"
+    },
+    "devDependencies": {
+        "browser-sync": "2.24.3",
+        "gulp": "^3.9.1"
+    }
+}
