@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+  <meta name="viewport" content="width=1000 user-scalable=0" />
+
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes" /> -->
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Postcode Deprivation Finder</title>
+
+  <link rel="icon" type="image/x-icon" href="https://automaticknowledge.org/mapacademy/assets/favicon.ico" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+
+</head>
+
+
+
+
+<body>
+ 
+  
+ 
+
+
+  <header class="mas">
+    <div class="container h-100 align-items-center">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="mx-auto">
+            <br>
+            <br>
+            <br>
+            <h1 class=><b>Postcode Deprivation Finder</b></h1>
+            <h2 class=>Enter a full postcode below</h2>
+            <h6>This page is based on the <a href="https://geoportal.statistics.gov.uk/datasets/onspd-centroids-lite/explore">ONSPD Centroids Lite</a> file published by ONS. I can't include BT postcodes, due to licencing restrictions. Contains OS data © Crown copyright and database right 2021 | Contains Royal Mail data © Royal Mail copyright and database right 2021 | Source: Office for National Statistics licensed under the Open Government Licence v.3.0. Made by <a href="https://automaticknowledge.co.uk">Automatic Knowledge</a>. Here's <a href="https://automaticknowledge.org/postcodez/postcode-deprivation-jun-2021.csv">the full csv</a>. Based on code by <a href="https://github.com/jurgenarias">Jurgen Arias</a>.</p></h6>
+            <form id="form">
+
+              <div class="input-group input-group-newsletter">
+
+                <input class="form-control" id="user-input" placeholder="e.g. IV2 4DQ"
+                  aria-label="Enter email..." aria-describedby="submit-button">
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="boton input-group-append" id="boton">
+                  <button class="boton btn btn-secondary" type="button" id="button">Get the data</button>
+                </div>
+              </div>
+            </form>
+
+            <p class="noresults">
+            </p>
+            <h6><b>Decile 10 = least deprived, Decile 1 = most deprived. Ranks relate to the deprivation rank of the area a postcode sits within, ranging from 1 to 32,844 in England, 1 to 1,909 in Wales and 1 to 6,976 in Scotland. A rank of 1 in all nations = most deprived.</b>
+            </h6>
+
+            <table class="table" cellpadding="10">
+              <thead>
+                <tr>
+                  <th scope="col">Postcode</th>
+                  <th scope="col">Council</th>
+                  <th scope="col">Constituency</th>
+                  <th scope="col">Country</th>
+                  <th scope="col">Decile</th>
+                  <th scope="col">Rank</th>
+
+                </tr>
+              </thead>
+              <tbody>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    </div>
+
+  </header>
+
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/underscore@1.12.0/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Third party plugin JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <!-- Core theme JS-->
+  <!-- <script src="js/scripts.js"></script> -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/coming-soon.min.js"></script>
+
+
+
+</body>
+
+</html>
