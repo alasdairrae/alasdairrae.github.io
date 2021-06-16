@@ -28,7 +28,7 @@ d3.csv("postcodez.csv").then(function (data) {
     if (filteredData.length === 0 && inputValue !== "Something to give no results"){
       d3.select("p").classed('noresults', true).html("<center><strong>We can't find that postcode, sorry.</strong>")
     }
-    output = _.sortBy(filteredData, 'rank').reverse()
+    output = _.sortBy(filteredData, 'postcode')
 
     for (var i = 0; i < filteredData.length; i++) {
      // console.log(output[i]['postcode'])
