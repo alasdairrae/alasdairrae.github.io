@@ -23,7 +23,7 @@ d3.csv("postcodez.csv").then(function (data) {
       d3.select("p").classed('noresults2', true).html("<center><strong>Erm, try again with a full postcode</strong>")
       inputValue = "Something to give no results"
     }
-    var filteredData = postcodez.filter(postcodez => postcodez.postcode.toLowerCase().trim().includes(inputValue));
+    var filteredData = postcodez.filter(postcodez => postcodez.postcode.toLowerCase().trim().match(inputValue));
    
     // console.log(filteredData.length)
     if (filteredData.length === 0 && inputValue !== "Something to give no results"){
