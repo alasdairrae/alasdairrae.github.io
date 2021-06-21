@@ -21,13 +21,19 @@ d3.csv("postcodez.csv").then(function (data) {
     // console.log(postcodez);
     if (inputValue.length < 6){
       d3.select("p").classed('noresults2', true).html("<center><strong>Please try again with a full postcode, including a space - e.g. IV2 4DQ</strong>")
-      inputValue = "Something to give no results"
+      return
     }
+    
     var filteredData = postcodez.filter(postcodez => postcodez.postcode.toLowerCase().trim().startsWith(inputValue));
    
     // console.log(filteredData.length)
-    if (filteredData.length === 0 && inputValue !== "Something to give no results"){
-      d3.select("p").classed('noresults', true).html("<center><strong>We can't find that postcode, sorry.</strong>")
+    if (filteredData.length === 0){
+      if (!inputValue.includes(" ")) {
+        d3.select("p").classed('noresults', true).html("<center><strong>Postcodes must include the space, sorry.</strong>")
+      } else {
+        d3.select("p").classed('noresults', true).html("<center><strong>We can't find that postcode, sorry.</strong>")
+      }
+      return
     }
     output = _.sortBy(filteredData, 'postcode')
 
