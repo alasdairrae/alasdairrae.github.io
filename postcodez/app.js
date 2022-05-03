@@ -20,7 +20,7 @@ d3.csv("postcodez.csv").then(function (data) {
     // console.log(inputValue.length);
     // console.log(postcodez);
     if (inputValue.length < 6){
-      d3.select("p").classed('noresults2', true).html("<center><strong>Please try again with a full postcode, including a space - e.g. IV2 4DQ</strong>")
+      d3.select("p").classed('noresults2', true).html("<center><strong>Please try again with a full postcode, including a space - e.g. SW1A 2AA</strong>")
       return
     }
     
