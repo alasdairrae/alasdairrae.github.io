@@ -62,7 +62,7 @@ function buildSpoke(airports, point) {
     let nearestAirportLines = turf.featureCollection([]);
     let cleanedAirports = JSON.parse(JSON.stringify(airports));
 
-    for (let i=1;i<=10;i++) {
+    for (let i=1;i<=3;i++) {
         const nearest = turf.nearestPoint(point, cleanedAirports);
         const startLng = point.geometry.coordinates[0];
         const endLng = nearest.geometry.coordinates[0];
@@ -119,7 +119,7 @@ function addLayers(airports, nearest, route) {
             'line-cap': 'round'
         },
         'paint': {
-            'line-color': '#FAB622',
+            'line-color': '#df0082',
             'line-width': [
                 'interpolate',
                 ['linear'],
@@ -168,7 +168,7 @@ function addLayers(airports, nearest, route) {
             ],
             'circle-opacity': 1,
             'circle-blur': 0,
-            'circle-color': '#035690'
+            'circle-color': '#453c90'
         }
     });
 }
