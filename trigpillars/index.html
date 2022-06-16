@@ -23,8 +23,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYWpyYWUiLCJhIjoiZjYyMDFjMTJhNjVhNjRmZGFmNjM1M
 const map = new mapboxgl.Map({
     container: 'map',
     style: 'https://api.maptiler.com/maps/basic/style.json?key=1HCKO0pQuPEfNXXzGgSM',
-    center: [-1.7134329, 51.9873136],
-    zoom: 8,
+    center: [-4.329630122438508, 57.15024110292916],
+    zoom: 7,
     projection: 'globe',
     maxZoom: 13
 });
@@ -62,7 +62,7 @@ function buildSpoke(airports, point) {
     let nearestAirportLines = turf.featureCollection([]);
     let cleanedAirports = JSON.parse(JSON.stringify(airports));
 
-    for (let i=1;i<=3;i++) {
+    for (let i=1;i<=8;i++) {
         const nearest = turf.nearestPoint(point, cleanedAirports);
         const startLng = point.geometry.coordinates[0];
         const endLng = nearest.geometry.coordinates[0];
