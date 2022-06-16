@@ -33,7 +33,7 @@ map.on('load', () => {
     let airports;
 
     map.once('idle', () => {
-        d3.json("./data/greggs.json", function (d) {
+        d3.json("./data/libraries.json", function (d) {
             airports = d;
             getSpoke(airports);
         });
