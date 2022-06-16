@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Massachusetts libraries spoke map</title>
+<title>Steak bake spider map</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.0-beta.2/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.0-beta.2/mapbox-gl.js"></script>
@@ -19,11 +19,11 @@ body { margin: 0; padding: 0; }
 
 let initLoad = true;
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FycmV0dG5lbHNvbiIsImEiOiJobnR2YjdRIn0.iANqBs5R5cw3euoH_62X4g';
+mapboxgl.accessToken = 'pk.eyJ1IjoiYWpyYWUiLCJhIjoiZjYyMDFjMTJhNjVhNjRmZGFmNjM1MjE1YTYxYjA3YmYifQ.FpDHggdIAaeBm7v0clXkrA';
 const map = new mapboxgl.Map({
     container: 'map',
     style: 'https://api.maptiler.com/maps/basic/style.json?key=1HCKO0pQuPEfNXXzGgSM',
-    center: [-72.0025807327177, 42.392110302532686],
+    center: [-2, 53],
     zoom: 8,
     projection: 'globe',
     maxZoom: 12
@@ -33,7 +33,7 @@ map.on('load', () => {
     let airports;
 
     map.once('idle', () => {
-        d3.json("./data/steakbake.json", function (d) {
+        d3.json("./data/greggs.geojson", function (d) {
             airports = d;
             getSpoke(airports);
         });
@@ -119,7 +119,7 @@ function addLayers(airports, nearest, route) {
             'line-cap': 'round'
         },
         'paint': {
-            'line-color': 'red',
+            'line-color': '#FAB622',
             'line-width': [
                 'interpolate',
                 ['linear'],
