@@ -62,7 +62,7 @@ function buildSpoke(airports, point) {
     let nearestAirportLines = turf.featureCollection([]);
     let cleanedAirports = JSON.parse(JSON.stringify(airports));
 
-    for (let i=1;i<=10;i++) {
+    for (let i=10;i<=10;i++) {
         const nearest = turf.nearestPoint(point, cleanedAirports);
         const startLng = point.geometry.coordinates[0];
         const endLng = nearest.geometry.coordinates[0];
