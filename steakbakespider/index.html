@@ -33,7 +33,7 @@ map.on('load', () => {
     let airports;
 
     map.once('idle', () => {
-        d3.json("./data/steakbake.json", function (d) {
+        d3.json("./data/greggs.json", function (d) {
             airports = d;
             getSpoke(airports);
         });
@@ -78,7 +78,7 @@ function buildSpoke(airports, point) {
         nearestAirports.features.push(nearest);
         nearestAirportLines.features.push(nearestLine);
 
-        const index = cleanedAirports.features.findIndex(n => n.properties.NAME === nearest.properties.NAME)
+        const index = cleanedAirports.features.findIndex(n => n.properties.FHRSID === nearest.properties.FHRSID)
         if (index !== -1) {
             cleanedAirports.features.splice(index, 1);
         }
