@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Steak bake spider map</title>
+<title>Steak bake spider</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.0-beta.2/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.0-beta.2/mapbox-gl.js"></script>
@@ -23,17 +23,17 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYWpyYWUiLCJhIjoiZjYyMDFjMTJhNjVhNjRmZGFmNjM1M
 const map = new mapboxgl.Map({
     container: 'map',
     style: 'https://api.maptiler.com/maps/basic/style.json?key=1HCKO0pQuPEfNXXzGgSM',
-    center: [-2, 53],
-    zoom: 8,
+    center: [-1.5, 53.5],
+    zoom: 6,
     projection: 'globe',
-    maxZoom: 12
+    maxZoom: 11
 });
 
 map.on('load', () => {
     let airports;
 
     map.once('idle', () => {
-        d3.json("./data/greggs.geojson", function (d) {
+        d3.json("./data/steakbake.json", function (d) {
             airports = d;
             getSpoke(airports);
         });
