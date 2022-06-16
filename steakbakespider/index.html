@@ -9,7 +9,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <style>
-body { margin: 0; padding: 0; }
+body { margin: 50; padding: 50; }
 #map { position: absolute; top: 0; bottom: 0; width: 100%; }
 </style>
 </head>
@@ -24,7 +24,7 @@ const map = new mapboxgl.Map({
     container: 'map',
     style: 'https://api.maptiler.com/maps/basic/style.json?key=1HCKO0pQuPEfNXXzGgSM',
     center: [-2.0, 53.4],
-    zoom: 7,
+    zoom: 6,
     projection: 'globe',
     maxZoom: 11
 });
