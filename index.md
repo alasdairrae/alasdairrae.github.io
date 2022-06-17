@@ -1,8 +1,8 @@
 ## Alasdair's Experimental Outputs
 
-You can find out more about my work on [my main University page](http://ajrae.staff.shef.ac.uk/) - this page is just for a few of my experimental outputs, such as interactive maps.
+This page is really quite old and I haven't done anything with it, as you can see.
 
-When I say 'experimental', I don't mean that it's not correct or somehow unfinished, just that I probably haven't done it for any specific project or client.
+I will tidy things up one day, maybe.
 
 ### The rest of the text is just holding text for now
 
