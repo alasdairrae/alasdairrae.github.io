@@ -10,4 +10,5 @@ So, in the example below, I added `shopCode` to the `n.properties.` and `nearest
 
 
 >**Note**: the Greggs location data was last updated on 19 June 2022.
->***Warning***: I am not responsible for what will happen if you eat too many Steak Bakes.
+
+>***Warning***: You may end up wasting lots of time playing with this.
