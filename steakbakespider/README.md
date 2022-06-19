@@ -7,3 +7,7 @@ If you want to make your own, all you need to do is put a json file in the data 
 So, in the example below, I added `shopCode` to the `n.properties.` and `nearest.properties` variables. If you don't do this, you'll only see a single line on the map. Thanks to Garrett for pointing this out to me.
 
 `const index = cleanedAirports.features.findIndex(n => n.properties.shopCode === nearest.properties.shopCode)`
+
+
+**Note**: the Greggs location data was last updated on 19 June 2022.
+***Warning***: I am not responsible for what will happen if you eat too many Steak Bakes.
