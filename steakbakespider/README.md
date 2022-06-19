@@ -9,5 +9,5 @@ So, in the example below, I added `shopCode` to the `n.properties.` and `nearest
 `const index = cleanedAirports.features.findIndex(n => n.properties.shopCode === nearest.properties.shopCode)`
 
 
-**Note**: the Greggs location data was last updated on 19 June 2022.
-***Warning***: I am not responsible for what will happen if you eat too many Steak Bakes.
+>**Note**: the Greggs location data was last updated on 19 June 2022.
+>***Warning***: I am not responsible for what will happen if you eat too many Steak Bakes.
