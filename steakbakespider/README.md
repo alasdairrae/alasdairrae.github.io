@@ -1,3 +1,3 @@
-# Steakbakespider map 
+# Steakbake spidermap 
 
 Using turf and mapbox to create dynamic hub and spoke maps. Using the code written by [William B. Davis](https://twitter.com/willy_maps) and then adapted by [Garrett Dash Nelson](https://twitter.com/en_dash). As you can probably tell, I barely know what I'm doing here - but I know just enough to make this work (with a little bit of extra help from Garrett). I compiled the original Greggs location list myself, using data from the Food Standards Agency, but I have now replaced this with data from Greggs - thanks to [Jason Cartwright](https://twitter.com/jasoncartwright) for pointing me to the source.
