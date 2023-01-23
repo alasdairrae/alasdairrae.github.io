@@ -26,14 +26,14 @@ const map = new mapboxgl.Map({
     center: [-1.7134329, 51.9873136],
     zoom: 8,
     projection: 'globe',
-    maxZoom: 13
+    maxZoom: 14
 });
 
 map.on('load', () => {
     let airports;
 
     map.once('idle', () => {
-        d3.json("./data/greggs.json", function (d) {
+        d3.json("./data/greggs-api.json", function (d) {
             airports = d;
             getSpoke(airports);
         });
@@ -78,7 +78,7 @@ function buildSpoke(airports, point) {
         nearestAirports.features.push(nearest);
         nearestAirportLines.features.push(nearestLine);
 
-        const index = cleanedAirports.features.findIndex(n => n.properties.FHRSID === nearest.properties.FHRSID)
+        const index = cleanedAirports.features.findIndex(n => n.properties.shopCode === nearest.properties.shopCode)
         if (index !== -1) {
             cleanedAirports.features.splice(index, 1);
         }
