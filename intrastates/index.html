@@ -8,6 +8,7 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" href="css/leaflet.css">
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
         <style>
         html, body, #map {
             width: 100%;
@@ -30,14 +31,14 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
+        <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
         <script src="data/BoundedbyInterstates_1.js"></script>
-        <script src="data/Interstates_2.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[23.054844142815433,-125.45884585051151],[49.194858011686534,-72.08003196142442]]);
+        }).fitBounds([[20.618489015709713,-129.71893834083187],[51.08992628947612,-67.29996442693562]]);
         var hash = new L.Hash(map);
-        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://www.maptiler.com/" title="Easy to use maps, documentation, code samples, and developer tools for web & mobile.">MapTiler</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
@@ -58,7 +59,7 @@
         function pop_BoundedbyInterstates_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2"><strong>Population in 2020</strong><br />' + (feature.properties['P0010001_sum'] !== null ? autolinker.link(feature.properties['P0010001_sum'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Population in 2020</strong><br />' + (feature.properties['P0010001_s'] !== null ? autolinker.link(feature.properties['P0010001_s'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -93,42 +94,6 @@
         });
         bounds_group.addLayer(layer_BoundedbyInterstates_1);
         map.addLayer(layer_BoundedbyInterstates_1);
-        function pop_Interstates_2(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['SIGN1'] !== null ? autolinker.link(feature.properties['SIGN1'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_Interstates_2_0() {
-            return {
-                pane: 'pane_Interstates_2',
-                opacity: 1,
-                color: 'rgba(0,63,135,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 2.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_Interstates_2');
-        map.getPane('pane_Interstates_2').style.zIndex = 402;
-        map.getPane('pane_Interstates_2').style['mix-blend-mode'] = 'normal';
-        var layer_Interstates_2 = new L.geoJson(json_Interstates_2, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_Interstates_2',
-            layerName: 'layer_Interstates_2',
-            pane: 'pane_Interstates_2',
-            onEachFeature: pop_Interstates_2,
-            style: style_Interstates_2_0,
-        });
-        bounds_group.addLayer(layer_Interstates_2);
-        map.addLayer(layer_Interstates_2);
             var title = new L.Control();
             title.onAdd = function (map) {
                 this._div = L.DomUtil.create('div', 'info');
@@ -151,11 +116,21 @@
                 abstract.show = function () {
                     this._div.classList.remove("abstract");
                     this._div.classList.add("abstractUncollapsed");
-                    this._div.innerHTML = 'Click to get the population for an area (2020, US Census). Population not bounded by an Interstate is just over 82 million (about 25%). What\'s the point of this? Curiosity, mainly.';
+                    this._div.innerHTML = 'Click to see the population for an area (2020, US Census). The population not bounded by Interstates is just over 82 million (about 25%). What\'s the point of this? Curiosity, mainly. Read more about this here.';
             };
             abstract.addTo(map);
+        var osmGeocoder = new L.Control.Geocoder({
+            collapsed: true,
+            position: 'topleft',
+            text: 'Search',
+            title: 'Testing'
+        }).addTo(map);
+        document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
+        .className += ' fa fa-search';
+        document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
+        .title += 'Search for a place';
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/Interstates_2.png" /> Interstates': layer_Interstates_2,'<img src="legend/BoundedbyInterstates_1.png" /> Bounded by Interstates': layer_BoundedbyInterstates_1,"MapTiler": layer_MapTiler_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/BoundedbyInterstates_1.png" /> Bounded by Interstates': layer_BoundedbyInterstates_1,"MapTiler": layer_MapTiler_0,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
     </body>
