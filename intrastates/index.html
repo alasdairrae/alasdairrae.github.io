@@ -38,7 +38,7 @@
             zoomControl:true, maxZoom:28, minZoom:1
         }).fitBounds([[20.618489015709713,-129.71893834083187],[51.08992628947612,-67.29996442693562]]);
         var hash = new L.Hash(map);
-         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://www.maptiler.com/" title="Easy to use maps, documentation, code samples, and developer tools for web & mobile.">MapTiler</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://www.maptiler.com/" title="Easy to use maps, documentation, code samples, and developer tools for web & mobile." target="_blank">MapTiler</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps" target="_blank">Leaflet</a> &middot; <a href="https://qgis.org" target="_blank">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
