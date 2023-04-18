@@ -116,7 +116,7 @@
                 abstract.show = function () {
                     this._div.classList.remove("abstract");
                     this._div.classList.add("abstractUncollapsed");
-                    this._div.innerHTML = 'Click to see the population for an area (2020, US Census). The population not bounded by Interstates is just over 82 million (about 25%). What\'s the point of this? Curiosity, mainly. Read more about this here.';
+                    this._div.innerHTML = 'Click to see the population for an area (2020, US Census). The population not bounded by Interstates is just over 82 million (about 25%). What\'s the point of this? Curiosity, mainly. Read more about this <a href="http://www.statsmapsnpix.com/2023/04/intra-interstate-populations.html">here</a>.';
             };
             abstract.addTo(map);
         var osmGeocoder = new L.Control.Geocoder({
