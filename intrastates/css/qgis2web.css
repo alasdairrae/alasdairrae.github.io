@@ -15,8 +15,8 @@
             border-radius: 5px;
         }
         .info h2 {
-            margin: 0 0 5px;
-            color: #777;
+            margin: 0 0 3px;
+            color: #222;
         }
         .leaflet-container {
             background: #fff;
