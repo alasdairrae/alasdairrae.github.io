@@ -9,6 +9,6 @@ So, in the example below, I added `shopCode` to the `n.properties.` and `nearest
 `const index = cleanedAirports.features.findIndex(n => n.properties.shopCode === nearest.properties.shopCode)`
 
 
->**Note**: the Greggs location data was last updated on 19 June 2022.
+>**Note**: the Greggs location data was last updated on 11 May 2025.
 
 >**Warning**: You may end up wasting lots of time playing with this.
